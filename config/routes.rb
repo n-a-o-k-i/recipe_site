@@ -4,4 +4,7 @@ Rails.application.routes.draw do
       resources :recipes
     end
   end
+  namespace 'admin' do
+    resources :recipes
+  end
 end
