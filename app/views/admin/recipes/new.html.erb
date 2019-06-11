@@ -1,9 +1,9 @@
 <div id="recipes">
  <% @recipes.each do |recipe| %>
-   <button v-on:click="setRecipeInfo(<%= recipe.id %>)"><%= recipe.id %></button>
+   <button v-on:click="getIngredients(<%= recipe.id %>)"><%= recipe.id %></button>
  <% end %>
  <div>
-   <p>ingredients: {{ recipeInfo }}</p>
+   <p>{{ ingredients }}</p>
  </div>
 </div>
 <%= javascript_pack_tag 'hello_vue' %>

@@ -9,7 +9,8 @@ module Api
       def show
         ingredients = Ingredient.where(recipe_id: params[:id])
         instructions = Instruction.where(recipe_id: params[:id])
-        render json: { status: 'SUCCESS', message: 'loaded the ingredients and instructions', data: [ingredients,instructions] }
+        render json: { status: 'SUCCESS', message: 'loaded the ingredients and instructions', data: ingredients }
+        # render json: { status: 'SUCCESS', message: 'loaded the ingredients and instructions', data: [ingredients,instructions] }
       end
     end
   end
